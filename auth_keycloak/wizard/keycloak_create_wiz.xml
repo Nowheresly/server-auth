@@ -46,7 +46,6 @@
   <record id="keycloak_create_users" model="ir.actions.act_window">
     <field name="name">Push users to Keycloak</field>
     <field name="res_model">auth.keycloak.create.wiz</field>
-    <field name="view_type">form</field>
     <field name="view_mode">tree,form</field>
     <field name="view_id" ref="auth_keycloak_create_wiz"/>
     <field name="target">new</field>

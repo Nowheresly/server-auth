@@ -36,7 +36,6 @@
   <record id="keycloak_sync_users" model="ir.actions.act_window">
     <field name="name">Keycloak sync users</field>
     <field name="res_model">auth.keycloak.sync.wiz</field>
-    <field name="view_type">form</field>
     <field name="view_mode">tree,form</field>
     <field name="view_id" ref="auth_keycloak_sync_wiz"/>
     <field name="target">new</field>

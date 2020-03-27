@@ -129,7 +129,6 @@ class KeycloakSyncWiz(models.TransientModel):
     _inherit = 'auth.keycloak.sync.mixin'
     _description = 'Synchronize Keycloak users'
 
-    @api.multi
     def button_sync(self):
         """Sync Keycloak users w/ Odoo users.
 
@@ -282,7 +281,6 @@ class KeycloakCreateWiz(models.TransientModel):
         # so we are forced to do anothe call to get its data :(
         return self._get_users(token, search=data['username'])[0]
 
-    @api.multi
     def button_create_user(self):
         """Create users on Keycloak.
 
