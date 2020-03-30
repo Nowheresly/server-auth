@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Copyright 2018 Camptocamp SA
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html)
 from odoo import fields, models, api, exceptions, _
@@ -16,6 +17,7 @@ class KeycloakSyncMixin(models.AbstractModel):
     """Synchronize Keycloak users mixin."""
 
     _name = 'auth.keycloak.sync.mixin'
+    _description = 'Synchronize Keycloak users'
 
     provider_id = fields.Many2one(
         string='Provider',
@@ -125,6 +127,7 @@ class KeycloakSyncWiz(models.TransientModel):
 
     _name = 'auth.keycloak.sync.wiz'
     _inherit = 'auth.keycloak.sync.mixin'
+    _description = 'Synchronize Keycloak users'
 
     @api.multi
     def button_sync(self):
@@ -182,6 +185,7 @@ class KeycloakCreateWiz(models.TransientModel):
 
     _name = 'auth.keycloak.create.wiz'
     _inherit = 'auth.keycloak.sync.mixin'
+    _description = 'Export Odoo users to Keycloak'
 
     user_ids = fields.Many2many(
         comodel_name='res.users',
